@@ -58,15 +58,19 @@ class _CalculatorState extends State<Calculator> {
                   ),
 
                   // Main display text
-                  Text(
-                    provider.displayText,  // To display the text in the screen
-                    textAlign: TextAlign.left,
-                    style: const TextStyle(
-                      fontSize: 80, 
-                      color: Colors.white,
-                      fontWeight: FontWeight.w200,
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      provider.displayText,
+                      textAlign: TextAlign.left,
+                      style: const TextStyle(
+                        fontSize: 80,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w200,
+                      ),
                     ),
-                  ), 
+                  ),
                   
                 ],
               )
